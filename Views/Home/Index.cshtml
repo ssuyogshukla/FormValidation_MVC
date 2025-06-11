@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model FormValidation_MVC.Models.Student
+
+<div class="container-fluid">
+    @using(Html.BeginForm(FormMethod.Post)){
+   <div class="row"> 
+     <div class="col-sm-6">
+            <div>
+            @Html.DisplayName("roll")
+          
+           </div>
+       
+          <div>
+            @Html.TextBox("roll","",new {@class="form-control"})
+                    @Html.ValidationMessage("roll", new { style = "color:red;"})
+         </div>
+            <div>
+                @Html.DisplayName("name")
+            </div>
+
+            <div>
+                    @Html.TextBox("name","", new { @class = "form-control" })
+                    @Html.ValidationMessage("name", new { style = "color:red;"})
+            </div>
+            <div>
+                @Html.DisplayName("dob")
+            </div>
+
+            <div>
+                @Html.TextBox( "dob","", new { @class = "form-control" })
+                    @Html.ValidationMessage("dob",new{style="color:red;"})
+            </div>
+
+            <div>
+                @Html.DisplayName("email")
+            </div>
+
+            <div>
+                @Html.TextBox("email","", new { @class = "form-control" })
+                    @Html.ValidationMessage("email", new { style = "color:red;"})
+            </div>
+            <div>
+                @Html.DisplayName("mob")
+            </div>
+
+            <div>
+                @Html.TextBox( "mob", "",new { @class = "form-control" })
+                    @Html.ValidationMessage("mob", new { style = "color:red;"})
+            </div>
+
+            <div>
+            <input type="submit" class="btn btn-primary" value="Submit"/>
+            </div>
+      </div>
+   </div>
+
+   }
+</div>
